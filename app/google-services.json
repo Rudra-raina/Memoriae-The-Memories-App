@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "800293944572",
+    "project_id": "memoriae-bbe74",
+    "storage_bucket": "memoriae-bbe74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800293944572:android:4c489b8e62233da51ceb79",
+        "android_client_info": {
+          "package_name": "com.example.memoriae"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "800293944572-shk65k2jfg8d6g777o34v8957o1i88f9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.memoriae",
+            "certificate_hash": "2e5c36a6e0b41f2800f24966ea2e8983004c86e8"
+          }
+        },
+        {
+          "client_id": "800293944572-d6545fg0klrjbm5rfiqm3n40opvnj6uo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNuXYcaKaTHjRM7mnjfJqGA3OkoOzlKcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "800293944572-d6545fg0klrjbm5rfiqm3n40opvnj6uo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

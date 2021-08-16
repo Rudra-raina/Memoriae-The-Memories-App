@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Using a selector to change the background upon clicking via state checked feature-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/bg_color"/>
+            <corners android:radius="30dp"/>
+        </shape>
+    </item>
+
+</selector>
