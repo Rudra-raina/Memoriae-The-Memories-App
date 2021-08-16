@@ -31,34 +31,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <FrameLayout
+            <ImageView
+                android:id="@+id/ivMemoryImage"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="250dp"
+                android:contentDescription="@string/image"/>
 
-                <ImageView
-                    android:id="@+id/ivMemoryImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:contentDescription="@string/image"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|end"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:elevation="@dimen/_10sdp"
-                    android:background="@drawable/favorite_button_background">
-
-                    <ImageView
-                        android:id="@+id/favOption"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/favorites"
-                        android:src="@drawable/ic_favorite_unselected" />
-
-                </LinearLayout>
-
-            </FrameLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

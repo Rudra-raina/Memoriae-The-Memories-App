@@ -7,7 +7,6 @@ import com.example.memoriae.ui.activities.*
 import com.example.memoriae.ui.fragments.GlobalFragment
 import com.example.memoriae.ui.fragments.PersonalFragment
 import com.example.memoriae.ui.fragments.SearchFragment
-import com.example.model.Favorites
 import com.example.model.Memory
 import com.example.model.User
 import com.example.utils.Constants
@@ -87,27 +86,6 @@ class FireStoreClass {
             }
     }
 
-    fun uploadFavoriteMemory(activity:Activity,favMemory:Favorites,memoryID:String){
-        mFireStore.collection(Constants.FAVORITES)
-            .document(memoryID)
-            .set(favMemory, SetOptions.merge())
-            .addOnSuccessListener {
-                if(activity is MemoryDetailsActivity){
-                    activity.favMemoryAdded()
-                }else if (activity is FavoriteMemoryDetailsActivity){
-                    activity.favMemoryAdded()
-                }
-            }
-            .addOnFailureListener {
-                if(activity is MemoryDetailsActivity){
-                    activity.hideProgressBar()
-                }else if (activity is FavoriteMemoryDetailsActivity){
-                    activity.hideProgressBar()
-                }
-                Log.e(activity.javaClass.simpleName,"Error while uploading the product details")
-            }
-    }
-
     fun getMemoriesList(fragment : PersonalFragment){
         mFireStore.collection(Constants.MEMORIES)
             .whereEqualTo(Constants.USERID,getCurrentUserID())
@@ -134,24 +112,6 @@ class FireStoreClass {
             }
     }
 
-
-    fun getFavoriteMemoriesList(activity: FavoriteMemoriesActivity){
-        mFireStore.collection(Constants.FAVORITES)
-            .whereEqualTo(Constants.USERID,FireStoreClass().getCurrentUserID())
-            .get()
-            .addOnSuccessListener { list->
-                val memoryList : ArrayList<Favorites> = ArrayList()
-                for(i in list.documents){
-                    val favMemory =i.toObject(Favorites::class.java)!!
-                    memoryList.add(favMemory)
-                }
-                activity.listReceivedSuccessfully(memoryList)
-            }
-            .addOnFailureListener {
-                activity.hideProgressBar()
-            }
-    }
-
     fun deleteMemory(fragment: PersonalFragment,memoryID:String){
         mFireStore.collection(Constants.MEMORIES)
             .document(memoryID)
@@ -164,30 +124,6 @@ class FireStoreClass {
                 fragment.hideProgressBar()
                 Log.e(fragment.javaClass.simpleName, "Error while deleting the memory.")
             }
-    }
-
-    fun deleteFavoriteMemory(activity: Activity,memoryID: String){
-        mFireStore.collection(Constants.FAVORITES)
-            .document(memoryID)
-            .delete()
-            .addOnSuccessListener {
-                Log.e("Deleted","DONE")
-                if(activity is MemoryDetailsActivity){
-                    activity.deleteFromFavorites()
-                }else if (activity is FavoriteMemoryDetailsActivity){
-                    activity.deleteFromFavorites()
-                }
-
-            }
-            .addOnFailureListener {
-                if(activity is MemoryDetailsActivity){
-                    activity.hideProgressBar()
-                }else if (activity is FavoriteMemoryDetailsActivity){
-                    activity.hideProgressBar()
-                }
-                Log.e(activity.javaClass.simpleName, "Error while deleting the memory.")
-            }
-
     }
 
     fun updateMemory(activity: Activity, memoryHashMap: HashMap<String,Any>, memoryID: String){

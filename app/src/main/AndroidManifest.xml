@@ -21,14 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Memoriae"
         tools:ignore="AllowBackup">
-        <activity
-            android:name=".ui.activities.FavoriteMemoryDetailsActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Memoriae.NoActionBar"/>
-        <activity
-            android:name=".ui.activities.FavoriteMemoriesActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Memoriae.NoActionBar" />
+
         <activity
             android:name=".ui.activities.MemoryDetailsActivity"
             android:screenOrientation="portrait"
@@ -52,6 +45,7 @@
         <activity
             android:name=".ui.activities.FragmentActivity"
             android:label="@string/title_activity_fragment"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustNothing"/>
 
         <activity

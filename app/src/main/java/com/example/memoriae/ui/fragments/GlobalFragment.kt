@@ -9,7 +9,6 @@ import com.example.adapter.GlobalMemoryAdapter
 import com.example.firestore.FireStoreClass
 import com.example.memoriae.R
 import com.example.memoriae.databinding.FragmentGlobalBinding
-import com.example.memoriae.ui.activities.FavoriteMemoriesActivity
 import com.example.model.Memory
 import com.example.utils.BaseFragment
 
@@ -17,25 +16,6 @@ class GlobalFragment : BaseFragment() {
 
     private var mBinding : FragmentGlobalBinding? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.global_menu,menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.action_favorites->{
-                val intent= Intent(requireContext(),FavoriteMemoriesActivity::class.java)
-                startActivity(intent)
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         mBinding= FragmentGlobalBinding.inflate(inflater,container,false)
