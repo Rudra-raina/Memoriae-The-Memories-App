@@ -40,7 +40,10 @@ object Constants {
     const val PASS_MEMORY = "pass_memory"
 
 
-    const val API_KEY_VALUE : String = "c600185380692742acce59b3891c80b3"
+//    const val API_KEY_VALUE : String = "c600185380692742acce59b3891c80b3"
+    // 23-7 : AIzaSyCXuazUmIQ5tueibG9B0i8IZL95H9EPfd0
+    const val API_KEY_VALUE : String = "ff133a50723ffdc2857eabcacbaf760f"
+
     const val BASE_URL : String ="https://api.openweathermap.org"
     const val END_POINT : String ="/data/2.5/weather"
     const val QUERY_CITY_NAME : String = "q"
@@ -53,4 +56,9 @@ object Constants {
     const val FAV="fav"
 
     const val favMemoryDetails ="favMemoriesDetails "
+    ;
+    // old google key :AIzaSyAQHLifMESNp7Vhc_KP9yORhQS7EHGsv9U
+
+    // Somthing random AIzaSyDZmp3SSG7XOgszDHMBKwZZ-7aa0nyoELs
+
 }

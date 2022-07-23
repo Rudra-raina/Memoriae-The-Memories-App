@@ -1,5 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="mapKey">AIzaSyAQHLifMESNp7Vhc_KP9yORhQS7EHGsv9U</string>
+
+    <string name="mapKey">AIzaSyDZmp3SSG7XOgszDHMBKwZZ-7aa0nyoELs</string>
 
 
     <string name="app_name">Memoriae</string>
@@ -64,7 +65,7 @@
     <string name="abcdefghijklmnqr">abcdefghijklmnqr</string>
     <string name="view_on_google_maps">VIEW ON GOOGLE MAPS</string>
     <string name="invalid">Not availabe</string>
-    <string name="invalid_city_name_weather_data_not_available">Weather data not available. Please change thr city name</string>
+    <string name="invalid_city_name_weather_data_not_available">Weather data not available. Please change the city name</string>
     <string name="map">map</string>
     <string name="publicc">PUBLIC</string>
     <string name="public_nzme">Public</string>
