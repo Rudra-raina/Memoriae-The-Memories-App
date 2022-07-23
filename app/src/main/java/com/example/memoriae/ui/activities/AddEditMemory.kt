@@ -109,6 +109,7 @@ class AddEditMemory : Base(), View.OnClickListener{
             updateDateInVew()
         }
 
+
         mBinding.etDate.setOnClickListener(this)
         mBinding.tvAddImage.setOnClickListener(this)
         mBinding.tvAddImage.setOnClickListener(this)
